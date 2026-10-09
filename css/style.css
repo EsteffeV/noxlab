@@ -1,26 +1,26 @@
 /* ==========================================================================
-   sentio — feuille de style unique
-   Organisation : 1. Variables  2. Base  3. Composants  4. Sections  5. Responsive
-   Pour changer l'apparence du site, commencez par les variables (section 1).
+   Nox Lab — single stylesheet
+   Layout: 1. Variables  2. Base  3. Components  4. Sections  5. Responsive
+   To change the look of the site, start with the variables (section 1).
    ========================================================================== */
 
 /* 1. VARIABLES ------------------------------------------------------------ */
 :root {
-  /* Couleurs */
+  /* Colours */
   --bg:        #0d0f0e;
-  --surface:   #151917;   /* cartes, champs */
-  --surface-2: #1b201d;   /* emplacements photo */
-  --line:      #262b28;   /* filets */
+  --surface:   #151917;   /* cards, fields */
+  --surface-2: #1b201d;   /* photo placeholders */
+  --line:      #262b28;   /* rules */
   --text:      #f2f4ef;
   --muted:     #9aa49d;
-  --accent:    #d6f46a;   /* vert citron : boutons, mots clés */
-  --accent-ink:#10140a;   /* texte sur fond accent */
+  --accent:    #d6f46a;   /* lime green: buttons, keywords */
+  --accent-ink:#10140a;   /* text on accent background */
 
-  /* Typographie */
+  /* Typography */
   --font-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Espacements et largeurs */
+  /* Spacing and widths */
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
   --max:    72rem;
   --section-y: clamp(4.5rem, 10vw, 8rem);
@@ -58,9 +58,9 @@ ul { padding: 0; list-style: none; }
 }
 .skip-link:focus { top: 0.75rem; }
 
-/* 3. COMPOSANTS ----------------------------------------------------------- */
+/* 3. COMPONENTS ---------------------------------------------------------- */
 
-/* Étiquette de section : « 01 — Services » */
+/* Section label: "01 — Services" */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -69,7 +69,7 @@ ul { padding: 0; list-style: none; }
   margin-bottom: 1rem;
 }
 
-/* Titres */
+/* Headings */
 .h-display {
   font-size: clamp(2.6rem, 7vw, 5.25rem);
   font-weight: 300;
@@ -83,7 +83,7 @@ ul { padding: 0; list-style: none; }
   letter-spacing: -0.025em;
 }
 
-/* Mot clé souligné en vert */
+/* Keyword underlined in green */
 .mark {
   color: var(--accent);
   text-decoration: underline;
@@ -97,7 +97,7 @@ u, .underline {
   text-underline-offset: 0.2em;
 }
 
-/* Boutons */
+/* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 0.75rem 1.4rem;
@@ -114,7 +114,7 @@ u, .underline {
 .btn--primary:hover { background: #e4ff7e; border-color: #e4ff7e; }
 .btn--sm { padding: 0.5rem 1rem; font-size: 0.8rem; }
 
-/* Emplacement photo (à remplacer par une <img>, voir README) */
+/* Photo placeholder (replace with an <img>, see README) */
 .photo {
   position: relative;
   background: var(--surface-2);
@@ -128,13 +128,13 @@ u, .underline {
   font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted);
 }
 
-/* Séparateurs « signal » */
+/* "Signal" dividers */
 .signal { width: 100%; height: 3.5rem; }
 .signal path { fill: none; vector-effect: non-scaling-stroke; }
 
 /* 4. SECTIONS ------------------------------------------------------------- */
 
-/* --- En-tête --- */
+/* --- Header --- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
   background: rgba(13, 15, 14, 0.82);
@@ -164,7 +164,7 @@ u, .underline {
 .hero__visual {
   position: relative;
   height: clamp(15rem, 34vw, 26rem);
-  margin-bottom: clamp(-6rem, -8vw, -3rem);   /* le titre chevauche l'image */
+  margin-bottom: clamp(-6rem, -8vw, -3rem);   /* the title overlaps the image */
   -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
           mask-image: linear-gradient(to bottom, #000 55%, transparent);
 }
@@ -176,7 +176,7 @@ u, .underline {
 .hero__tags { margin-top: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
 .hero .signal { margin-top: 3rem; }
 
-/* --- Sections génériques --- */
+/* --- Generic sections --- */
 .section { padding-block: var(--section-y); }
 
 .split { display: grid; grid-template-columns: 1fr 2.2fr; gap: 2rem 3rem; }
@@ -193,7 +193,7 @@ u, .underline {
 .service__title { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
 .service__text { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
 
-/* --- 02 Cas --- */
+/* --- 02 Cases --- */
 .cases__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-bottom: 2.5rem; }
 .cases__note { max-width: 20rem; font-size: 0.75rem; color: var(--muted); }
 
@@ -221,14 +221,30 @@ u, .underline {
 .case-card__src { margin-top: auto; padding-top: 1rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); }
 .case-card__src a, .meta a { color: var(--text); }
 
-/* --- 03 Méthode --- */
+/* --- 03 Approach --- */
 .method .h-section { margin-bottom: 3rem; }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem; margin: 0; list-style: none; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; border-top: 1px solid var(--line); padding: 1.5rem 0 0; margin: 0; list-style: none; }
 .step__num { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 1.5rem; }
 .step__title { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
 .step__text { font-size: 0.8rem; color: var(--muted); }
 
-/* --- 04 Équipe --- */
+/* Scoping note call-out */
+.scoping { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--accent); border-radius: var(--radius); }
+.scoping__title { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.4rem; }
+.scoping__text { font-size: 0.85rem; color: var(--muted); max-width: 40rem; }
+
+/* "In progress" tag on a case */
+.status { display: inline-block; margin-left: 0.5rem; padding: 0.05rem 0.45rem; border: 1px solid var(--line); border-radius: 999px; color: var(--accent); }
+
+/* Principles and "what we are not" */
+.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
+.principle { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.principle__title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.principle__text { font-size: 0.8rem; color: var(--muted); }
+.not-list { margin-top: 3rem; font-size: 0.85rem; color: var(--muted); }
+.not-list span { color: var(--text); font-weight: 600; }
+
+/* --- 04 Team --- */
 .team .h-section { margin-bottom: 2.5rem; }
 .team__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .member .photo { aspect-ratio: 16 / 9; margin-bottom: 1rem; }
@@ -261,16 +277,16 @@ u, .underline {
 .field textarea { min-height: 7.5rem; resize: vertical; }
 .form__actions { grid-column: 1 / -1; }
 .form__status { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); min-height: 1.2em; }
-.hp { position: absolute; left: -9999px; }   /* piège anti-spam, ne pas supprimer */
+.hp { position: absolute; left: -9999px; }   /* anti-spam trap, do not remove */
 
-/* --- Pied de page --- */
+/* --- Footer --- */
 .site-footer { border-top: 1px solid var(--line); padding-block: 1.5rem; font-size: 0.75rem; color: var(--muted); }
 .site-footer__inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .site-footer nav { display: flex; gap: 1.5rem; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--text); }
 
-/* --- Pages légales --- */
+/* --- Legal pages --- */
 .legal { padding-block: 4rem 6rem; max-width: 44rem; }
 .legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 2rem; }
 .legal h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
@@ -283,10 +299,11 @@ u, .underline {
   .case-main__chart { min-height: 14rem; }
   .case-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
+  .principles { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (max-width: 48rem) {
-  /* Menu mobile */
+  /* Mobile menu */
   .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     width: 2.5rem; height: 2.5rem;

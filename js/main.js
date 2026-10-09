@@ -1,6 +1,6 @@
-// Petit script sans dépendance : menu mobile + envoi du formulaire.
+// Small dependency-free script: mobile menu + form submission.
 
-// Menu mobile
+// Mobile menu
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('#nav');
 
@@ -9,7 +9,7 @@ if (toggle && nav) {
     const open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
   });
-  // Referme le menu après un clic sur un lien
+  // Close the menu after a link is clicked
   nav.addEventListener('click', (e) => {
     if (e.target.closest('a')) {
       nav.classList.remove('is-open');
@@ -18,7 +18,7 @@ if (toggle && nav) {
   });
 }
 
-// Formulaire : envoi en arrière-plan (fonctionne avec Formspree, Getform, Basin…)
+// Form: background submission (works with Formspree, Getform, Basin…)
 const form = document.querySelector('#contact-form');
 
 if (form) {
