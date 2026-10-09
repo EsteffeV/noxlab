@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>sentio — Mesurer ce que les gens ressentent vraiment</title>
+  <meta name="description" content="Mesures physiologiques et comportementales (EEG, ECG, respiration, eye-tracking, motion capture) pour comprendre ce que ressentent vos utilisateurs : fatigue, attention, confort. Paris.">
+
+  <!-- Aperçu lors d'un partage (LinkedIn, etc.) -->
+  <meta property="og:title" content="sentio — Mesurer ce que les gens ressentent vraiment">
+  <meta property="og:description" content="Fatigue, attention, confort : des mesures sur le corps, pas seulement sur ce que les gens disent.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <!-- <meta property="og:image" content="https://VOTRE-DOMAINE/assets/og.jpg"> -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="en/">
+
+  <!-- Polices : Google Fonts. Pour s'en passer, retirez ces 3 lignes (le site utilise alors la police système). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ===== En-tête ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top" aria-label="sentio — accueil">
+        <svg viewBox="0 0 24 16" aria-hidden="true"><path d="M0 8h6l2-6 4 12 3-6h9"/></svg>
+        sentio
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 5h14M2 13h14"/></svg>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <div class="nav__links">
+          <a href="#services">Services</a>
+          <a href="#cas">Cas</a>
+          <a href="#methode">Méthode</a>
+          <a href="#equipe">Équipe</a>
+        </div>
+        <div class="lang" aria-label="Langue">
+          <a href="index.html" aria-current="true" hreflang="fr">FR</a> / <a href="en/" hreflang="en">EN</a>
+        </div>
+        <a class="btn btn--primary btn--sm" href="#contact">Nous écrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <span id="top"></span>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__visual">
+          <!-- Remplacer le bloc .photo__tag par : <img src="assets/hero.jpg" alt="Participante portant un casque EEG au volant d'un simulateur" width="1600" height="900"> -->
+          <div class="photo"><span class="photo__tag">[PHOTO — participant·e avec casque EEG au volant, simulateur]</span></div>
+        </div>
+
+        <h1 class="h-display hero__title">Nous mesurons ce que les gens <span class="mark">ressentent vraiment</span> face aux produits et dans les environnements.</h1>
+
+        <p class="hero__lead">En particulier dans l'expérience de conduite : <u>fatigue, attention, confort de l'habitacle.</u> Nous appliquons les mêmes méthodes au confort, au son et aux expériences numériques et virtuelles.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Parler de votre projet</a>
+          <a class="btn" href="#cas">Voir les cas</a>
+        </div>
+
+        <p class="hero__tags">EEG · ECG · respiration · eye-tracking · motion capture · olfaction · audition · VR — Paris</p>
+
+        <svg class="signal" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+          <path stroke="var(--accent)" stroke-width="1.2" d="M0 28H300l10-8 8 8 6-20 8 38 8-18h12l10-4 8 4H690l10-8 8 8 6-20 8 38 8-18h12l10-4 8 4H1200"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== 01 Services ===== -->
+    <section class="section" id="services">
+      <div class="container split">
+        <div class="services__intro">
+          <p class="eyebrow">01 — Services</p>
+          <h2 class="h-section">Vous avez une question. On pose des capteurs pour y répondre.</h2>
+        </div>
+
+        <ul class="service-list">
+          <li class="service">
+            <p class="service__q">« <u>Quand</u> décroche-t-on ? »</p>
+            <div>
+              <h3 class="service__title">Fatigue &amp; vigilance</h3>
+              <p class="service__text">Somnolence et baisse d'attention au volant ou en poste, suivies seconde par seconde (EEG, ECG, EOG, respiration).</p>
+            </div>
+          </li>
+          <li class="service">
+            <p class="service__q">« <u>Confortable</u> ou fatigant ? »</p>
+            <div>
+              <h3 class="service__title">Confort &amp; posture</h3>
+              <p class="service__text">Sièges, habitacles, postes de travail : posture en motion capture, charge physiologique et ressenti déclaré.</p>
+            </div>
+          </li>
+          <li class="service">
+            <p class="service__q">« Lequel préfèrent-ils <em>vraiment</em> ? »</p>
+            <div>
+              <h3 class="service__title">Son &amp; ambiance</h3>
+              <p class="service__text">Sons, odeurs et ambiances comparés sur la réponse du corps, pas seulement sur ce que les gens disent.</p>
+            </div>
+          </li>
+          <li class="service">
+            <p class="service__q">« Que disent <u>nos données</u> ? »</p>
+            <div>
+              <h3 class="service__title">Analyse de données</h3>
+              <p class="service__text">Vous avez déjà des enregistrements ? On les nettoie, on les analyse et on vous dit ce qu'ils montrent.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 02 Cas ===== -->
+    <section class="section" id="cas">
+      <div class="container">
+        <div class="cases__head">
+          <div>
+            <p class="eyebrow">02 — Cas</p>
+            <h2 class="h-section">Ce que l'on sait faire, sur des données réelles.</h2>
+          </div>
+          <p class="cases__note">Analyses menées par nos soins sur des jeux de données ouverts (licences CC BY), sources citées.</p>
+        </div>
+
+        <!-- Cas principal -->
+        <article class="card case-main">
+          <div class="case-main__chart">
+            <!-- Graphique provisoire : à remplacer par votre analyse (<img src="assets/cas-fatigue.svg" alt="..."> ). -->
+            <svg viewBox="0 0 560 300" preserveAspectRatio="none" role="img" aria-label="Graphique provisoire">
+              <path stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="1" d="M30 170 L90 168 L140 182 L190 160 L240 176 L290 168 L340 184 L390 170 L440 180 L490 196 L530 206"/>
+              <path stroke="var(--accent)" d="M30 232 L90 228 L140 224 L190 214 L240 218 L290 196 L340 200 L390 172 L440 180 L490 166 L530 160"/>
+            </svg>
+            <span class="photo__tag">[GRAPHIQUE — votre analyse : puissance alpha / thêta au fil de la conduite]</span>
+          </div>
+          <div class="case-main__body">
+            <p class="case-main__kicker">Cas principal · Conduite</p>
+            <h3 class="case-main__title">Fatigue au volant</h3>
+            <p class="case-main__text">[2–3 PHRASES — la question posée, ce que vous avez analysé, ce que montrent les résultats.]</p>
+            <dl class="meta">
+              <div><dt>Jeu de données</dt><dd>MPD-DF · 50 participants</dd></div>
+              <div><dt>Signaux</dt><dd>EEG, ECG, respiration, EOG</dd></div>
+              <div><dt>Source</dt><dd>figshare · CC BY 4.0</dd></div>
+              <div><dt>Publication</dt><dd><a href="#" rel="noopener">Scientific Data</a></dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Autres cas : copier-coller un <article> pour en ajouter -->
+        <div class="case-grid">
+          <article class="card case-card">
+            <p class="case-card__kicker">Numérique</p>
+            <h3 class="case-card__title">Attention et expérience à l'écran</h3>
+            <p class="case-card__text">BBBD · 178 participants · EEG, ECG, respiration, eye-tracking, mouvement de tête, questionnaires.</p>
+            <p class="case-card__src">Zenodo · CC BY 4.0 · <a href="#" rel="noopener">Source</a></p>
+          </article>
+          <article class="card case-card">
+            <p class="case-card__kicker">Son</p>
+            <h3 class="case-card__title">Musique et émotion</h3>
+            <p class="case-card__text">Affective music · EEG, ECG, respiration, conductance cutanée, évaluations émotionnelles.</p>
+            <p class="case-card__src">OpenNeuro ds002721 · CC BY 4.0 · <a href="#" rel="noopener">Source</a></p>
+          </article>
+          <article class="card case-card">
+            <p class="case-card__kicker">Réalité virtuelle</p>
+            <h3 class="case-card__title">S'orienter en réalité virtuelle</h3>
+            <p class="case-card__text">VR Navigation · 60 participants · EEG, trajectoires de déplacement, questionnaires.</p>
+            <p class="case-card__src">ScienceDB · CC BY · <a href="#" rel="noopener">Source</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 03 Méthode ===== -->
+    <section class="section method" id="methode">
+      <div class="container">
+        <p class="eyebrow">03 — Méthode</p>
+        <h2 class="h-section">On pose des capteurs, on observe, <span class="underline">on analyse.</span></h2>
+
+        <ol class="steps">
+          <li class="step">
+            <p class="step__num">→ 1</p>
+            <h3 class="step__title">Protocole</h3>
+            <p class="step__text">On traduit votre question en conditions de test, en participants et en mesures.</p>
+          </li>
+          <li class="step">
+            <p class="step__num">→ 2</p>
+            <h3 class="step__title">Mesures</h3>
+            <p class="step__text">Enregistrements en laboratoire, sur simulateur ou sur site, avec votre produit.</p>
+          </li>
+          <li class="step">
+            <p class="step__num">→ 3</p>
+            <h3 class="step__title">Analyse</h3>
+            <p class="step__text">Prétraitement et statistiques sous MATLAB et Python, scripts documentés.</p>
+          </li>
+          <li class="step">
+            <p class="step__num">→ 4</p>
+            <h3 class="step__title">Rapport</h3>
+            <p class="step__text">Des résultats lisibles et des recommandations que votre équipe peut utiliser.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 04 Équipe ===== -->
+    <section class="section team" id="equipe">
+      <div class="container">
+        <p class="eyebrow">04 — Équipe</p>
+        <h2 class="h-section">Deux chercheuses, un laboratoire mobile.</h2>
+
+        <div class="team__grid">
+          <article class="member">
+            <!-- Remplacer par : <img src="assets/zeynep.jpg" alt="Zeynep Yenigun au laboratoire" width="800" height="450"> -->
+            <div class="photo"><span class="photo__tag">[PHOTO — Zeynep au labo]</span></div>
+            <h3 class="member__name">Zeynep Yenigun</h3>
+            <p class="member__bio">EEG, ECG, olfaction, audition, eye-tracking et réalité virtuelle. Neurosciences cognitives (Maastricht).</p>
+          </article>
+          <article class="member">
+            <div class="photo"><span class="photo__tag">[PHOTO — cofondatrice au labo]</span></div>
+            <h3 class="member__name">[PRÉNOM NOM]</h3>
+            <p class="member__bio">ECG, respiration, motion capture, sommeil et conduite. Sciences cognitives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 Contact ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <svg class="signal" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+          <path stroke="var(--muted)" stroke-width="1" opacity=".7" d="M0 30 L40 26 L70 32 L110 22 L150 33 L190 27 L230 31 L270 20 L300 30 L340 24 L380 33 L420 28 L460 21 L500 32 L540 27 L580 34 L620 25 L660 30 L700 22 L740 31 L780 26 L820 33 L860 24 L900 30 L940 27 L980 32 L1020 23 L1060 30 L1100 26 L1150 31 L1200 28"/>
+        </svg>
+
+        <div class="contact__grid">
+          <div>
+            <p class="eyebrow">05 — Contact</p>
+            <h2 class="h-section contact__title">Une question sur ce que ressentent vos utilisateurs ?</h2>
+            <p class="contact__text">Écrivez-nous, on vous répond sous [DÉLAI].</p>
+            <p class="contact__mail"><a href="mailto:contact@exemple.fr">[EMAIL]</a></p>
+            <p class="contact__place">Paris · déplacements possibles</p>
+          </div>
+
+          <!-- Formulaire : remplacer l'action par l'URL de votre service (voir README) -->
+          <form class="form" action="https://formspree.io/f/VOTRE_ID" method="POST" id="contact-form">
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="entreprise">Entreprise</label>
+              <input id="entreprise" name="entreprise" type="text" autocomplete="organization">
+            </div>
+            <div class="field field--full">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field field--full">
+              <label for="question">Votre question</label>
+              <textarea id="question" name="question" required></textarea>
+            </div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Envoyer</button>
+              <p class="form__status" role="status" aria-live="polite"
+                 data-sending="Envoi en cours…"
+                 data-ok="Merci, votre message est bien parti."
+                 data-error="Une erreur est survenue. Écrivez-nous directement par e-mail."></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2026 sentio — Paris</p>
+      <nav aria-label="Liens légaux">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
